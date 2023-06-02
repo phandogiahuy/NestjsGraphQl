@@ -1,0 +1,15 @@
+import { Injectable } from '@nestjs/common';
+import { CreateCoffeeInput } from './dto/creaate-coffee.input/create-coffee.input';
+
+@Injectable()
+export class CoffeesService {
+  async findAll() {
+    return [];
+  }
+  async findOne(id: number) {
+    return null;
+  }
+  async create(createCoffeeInput: CreateCoffeeInput) {
+    return null;
+  }
+}
