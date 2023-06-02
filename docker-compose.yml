@@ -1,9 +1,14 @@
-version: '3.1'
-
+version: '3.7'
+name: 'db-nestjs-graphql'
 services:
   db:
-    image: postgres
+    # postgres:
+    container_name: database
+    image: postgres:13-alpine
     restart: always
     environment:
-      POSTGRES_PASSWORD: example
-      ports: -'5432:5432'
+      POSTGRES_USER: 'postgres'
+      POSTGRES_PASSWORD: 'postgres'
+      POSTGRES_DB: 'db-test'
+    ports:
+      - '5432:5432'
